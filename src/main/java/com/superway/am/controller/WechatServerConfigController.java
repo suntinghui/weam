@@ -78,7 +78,7 @@ public class WechatServerConfigController {
 				} else if ("?".equals(content) || "？".equals(content)) {
 					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
 				} else {
-					message = MessageUtil.defaultText(toUserName, fromUserName);;
+					message = MessageUtil.defaultText(toUserName, fromUserName);
 				}
 			} else if (MessageUtil.MESSAGE_EVNET.equals(msgType)) {
 				String eventType = map.get("Event");
@@ -98,7 +98,7 @@ public class WechatServerConfigController {
 				message = MessageUtil.initText(toUserName, fromUserName, label);
 			}
 
-			System.out.println("\nmessage: "+ message);
+			System.out.println("\nmessage: " + message);
 			return message;
 
 		} catch (Exception e) {
