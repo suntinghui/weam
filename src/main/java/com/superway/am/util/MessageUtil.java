@@ -107,7 +107,7 @@ public class MessageUtil {
 		text.setToUserName(fromUserName);
 		text.setMsgType(MessageUtil.MESSAGE_TEXT);
 		text.setCreateTime(new Date().getTime());
-		text.setContent("您的消息已经收到，企业360将竭诚为您服务~");
+		text.setContent(menuText());
 		return textMessageToXml(text);
 	}
 	
@@ -117,11 +117,10 @@ public class MessageUtil {
 	 */
 	public static String menuText(){
 		StringBuffer sb = new StringBuffer();
-		sb.append("欢迎您的关注，请按照菜单提示进行操作：\n\n");
-		sb.append("1、课程介绍\n");
-		sb.append("2、慕课网介绍\n");
-		sb.append("3、词组翻译\n\n");
-		sb.append("回复？调出此菜单。");
+		sb.append("欢迎您关注企业360。企业360着重于对反洗钱系统进行客户关系维护、系统部署情况反馈及提交问题工单等功能。\n");
+		sb.append("1、客户评价。用于收集客户对系统实施人员部署系统的反馈，客户可以进行评分及输入意见\n");
+		sb.append("2、意见建议。用于收集客户对系统的意见与建议，我们将在后续产品升级中进行更新\n");
+		sb.append("3、问题工单。当系统出现问题或bug时，通过问题工单可以将相关信息提交给技术人员");
 		return sb.toString();
 	}
 	

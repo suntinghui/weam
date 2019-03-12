@@ -69,17 +69,8 @@ public class WechatServerConfigController {
 
 			String message = null;
 			if (MessageUtil.MESSAGE_TEXT.equals(msgType)) {
-				if ("1".equals(content)) {
-					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.firstMenu());
-				} else if ("2".equals(content)) {
-					message = MessageUtil.initNewsMessage(toUserName, fromUserName);
-				} else if ("3".equals(content)) {
-					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.threeMenu());
-				} else if ("?".equals(content) || "？".equals(content)) {
-					message = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
-				} else {
-					message = MessageUtil.defaultText(toUserName, fromUserName);
-				}
+				message = MessageUtil.defaultText(toUserName, fromUserName);
+				
 			} else if (MessageUtil.MESSAGE_EVNET.equals(msgType)) {
 				String eventType = map.get("Event");
 				if (MessageUtil.MESSAGE_SUBSCRIBE.equals(eventType)) {

@@ -188,31 +188,23 @@ public class WeixinUtil {
 	 */
 	public static Menu initMenu(){
 		Menu menu = new Menu();
-		ClickButton button11 = new ClickButton();
-		button11.setName("click菜单");
-		button11.setType("click");
-		button11.setKey("11");
+		ViewButton button1 = new ViewButton();
+		button1.setName("客户评价");
+		button1.setType("view");
+		button1.setUrl("http://www.baidu.com");
 		
-		ViewButton button21 = new ViewButton();
-		button21.setName("view菜单");
-		button21.setType("view");
-		button21.setUrl("http://www.imooc.com");
+		ViewButton button2 = new ViewButton();
+		button2.setName("意见建议");
+		button2.setType("view");
+		button2.setUrl("http://www.baidu.com");
 		
-		ClickButton button31 = new ClickButton();
-		button31.setName("扫码事件");
-		button31.setType("scancode_push");
-		button31.setKey("31");
+		ViewButton button3 = new ViewButton();
+		button3.setName("问题工单");
+		button3.setType("view");
+		button3.setUrl("http://www.baidu.com");
 		
-		ClickButton button32 = new ClickButton();
-		button32.setName("地理位置");
-		button32.setType("location_select");
-		button32.setKey("32");
 		
-		Button button = new Button();
-		button.setName("菜单");
-		button.setSub_button(new Button[]{button31,button32});
-		
-		menu.setButton(new Button[]{button11,button21,button});
+		menu.setButton(new Button[]{button1,button2,button3});
 		return menu;
 	}
 	
