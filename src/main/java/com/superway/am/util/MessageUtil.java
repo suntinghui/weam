@@ -117,10 +117,8 @@ public class MessageUtil {
 	 */
 	public static String menuText(){
 		StringBuffer sb = new StringBuffer();
-		sb.append("欢迎您关注企业360。企业360着重于对反洗钱系统进行客户关系维护、系统部署情况反馈及提交问题工单等功能。\n");
-		sb.append("1、客户评价。用于收集客户对系统实施人员部署系统的反馈，客户可以进行评分及输入意见\n");
-		sb.append("2、意见建议。用于收集客户对系统的意见与建议，我们将在后续产品升级中进行更新\n");
-		sb.append("3、问题工单。当系统出现问题或bug时，通过问题工单可以将相关信息提交给技术人员");
+		sb.append("欢迎您关注企业360公众号。\n\n");
+		sb.append("企业360将基于反洗钱系统提供相关的配套服务，为客户提供急需的产品与解决方案。");
 		return sb.toString();
 	}
 	

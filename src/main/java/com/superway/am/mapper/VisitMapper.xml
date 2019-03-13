@@ -6,4 +6,12 @@
 	<select id="queryAll" resultType="visit">
 		select * from visit
 	</select>
+	
+	<insert id="insertVisit" parameterType="visit"  >
+         insert into visit(company_name,customer_name,customer_phone,total_score,sysImpl_score,service_score, opinion,create_date)  
+         values 
+         (#{company_name},#{customer_name},#{customer_phone},#{total_score},#{sysImpl_score},#{service_score},#{opinion},#{create_date})
+      </insert>
+      
+      
 </mapper>

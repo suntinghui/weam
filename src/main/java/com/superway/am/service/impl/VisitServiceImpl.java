@@ -21,4 +21,9 @@ public class VisitServiceImpl implements VisitService {
 		return mapper.queryAll();
 	}
 
+	@Override
+	public int insertVisit(Visit visit) {
+		return mapper.insertVisit(visit);
+	}
+
 }
